@@ -52,7 +52,7 @@
                                 <label for="gender-f">女性</label>
 
                                 @if ($errors->has('gender'))
-                                    <span class="invalid-feedback">
+                                    <span class="invalid-feedback" style="display:inline;">
                                         <strong>{{ $errors->first('gender') }}</strong>
                                     </span>
                                 @endif

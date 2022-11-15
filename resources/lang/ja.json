@@ -9,6 +9,7 @@
     "height":"身長",
     "weight":"体重",
     "body":"体型",
+    "gender":"性別",
     "Confirm Password":"パスワード(確認用)",
     "Reset Password":"パスワードリセット",
     "Send Password Reset Link":"パスワードリセットリンク送信",
