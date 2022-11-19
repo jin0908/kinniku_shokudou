@@ -59,12 +59,28 @@
                             </div>
                         </div>
                         
+                        <!-- 年齢入力欄 -->
+                        <div class="form-group row">
+                            <label for="age" class="col-md-4 col-form-label text-md-right">{{ __('年齢(歳)') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="age" type="number" value="20" step="1"  min="10" max="100" class="form-control @error('age') is-invalid @enderror" name="age" value="{{ old('age') }}" required autocomplete="age" autofocus>
+
+                                @error('age')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        
+
                         <!-- 身長入力欄 -->
                         <div class="form-group row">
                             <label for="height" class="col-md-4 col-form-label text-md-right">{{ __('身長(cm)') }}</label>
 
                             <div class="col-md-6">
-                                <input id="height" type="number" value="160" step="0.5" class="form-control @error('height') is-invalid @enderror" name="height" value="{{ old('height') }}" required autocomplete="height" autofocus>
+                                <input id="height" type="number" value="160" step="0.5" min="130" max="250" class="form-control @error('height') is-invalid @enderror" name="height" value="{{ old('height') }}" required autocomplete="height" autofocus>
 
                                 @error('height')
                                     <span class="invalid-feedback" role="alert">

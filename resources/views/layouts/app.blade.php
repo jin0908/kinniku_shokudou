@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{asset('css/styles.css')}}" rel="stylesheet" type="text/css">
+    
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -79,7 +80,7 @@
         </nav>
 
         <main class="py-4">
-            <!-- ログイン画面のレンダリング -->
+            <!-- 子ビューのレンダリング部分 -->
             @yield('content')
         </main>
     </div>

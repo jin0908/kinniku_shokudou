@@ -10,5 +10,13 @@ use Carbon\Carbon;
 
 class MemoController extends Controller
 {
-    //
+    public function record(){
+
+        return view('record');    
+    }
+
+
+
+
+    
 }
