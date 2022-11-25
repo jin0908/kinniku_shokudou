@@ -16,89 +16,76 @@
     </div>
     <div class="card">
         <div class="card-body text-center">
-            <h5>〇〇さんの間食の目標値は<br>
-            ○○kcal<br>
-            タンパク質：〇g<br>
-            脂質：〇g<br>
-            炭水化物：〇g<br>
-            </h5>
+            <h6>{{ $user->name }}さんの間食は1日<span style="color: red;" >{{$snack_time}}</span>回<br>
+            {{$kcal3}}kcal<br>
+            タンパク質：{{$protein2}}g<br>
+            脂質：{{$fat2}}g<br>
+            炭水化物：{{$carb2}}g<br>
+            ～上記を{{$snack_time}}回食べよう～<br>
+            </h6>
         </div>
     </div>
-    <div class="card-group">
         <div class="card">
             <div class="card-body">
-                <div class="card-title">
-                <h5>和食</h5>
-                </div>
+            <div class="card-title">
+                <h5>☆間食の時間帯☆</h5>
+                <p>{{$snack_chance}}</p>
+                
+                <h5>☆間食におすすめ食品☆</h5>
+                <p>～自分の目標値になるよう組み合わせよう～</p>
+            </div>
                 <div class="card-text">
-                    <h6>・白米<h6>
-                    <p>(お茶碗1杯250kcal,P:4g,F:0g,C:55g)</p>
-                    <h6>・ゆで卵<h6>
-                    <p>(80kcal,P:7g,F:6g,C:0g)</p>
-                    <h6>・納豆1パック<h6>
-                    <p>(80kcal,P:8g,F:5g,C:5g)</p>
-                    <h6>・豆腐の味噌汁</h6>
-                    <p>(50kcal,P:3g,F:1g,C:5g)</p>
+                <ul class="list">
+                        <li class="item">
+                        ・素焼きアーモンド10粒<p>(70kcal,P:2g,F:5g,C:2g)</p>
+                        </li>
+                        <li class="item">
+                        ・焼き芋 小さめ1本<p>(160kcal,P:2g,F:0g,C:35g)</p>
+                        </li>
+                        <li class="item">
+                        ・カッテージチーズ<p>(100g:115kcal,P:18g,F:4g,C:0g)</p>
+                        </li>
+                        <li class="item">
+                        ・プロテインドリンク<p>(1杯:80kcal,P:20g,F:1g,C:8g)</p>
+                        </li>
+                        <li class="item">
+                        ・カステラ<p>(1切れ:70kcal,P:2g,F:5g,C:2g)</p>
+                        </li>
+                        <li class="item">
+                        ・どら焼き<p>(170kcal,P:4g,F:3g,C:30g)</p>
+                        </li>
+                        <li class="item">
+                        ・大福<p>(230kcal,P:4g,F:1g,C:50g)</p>
+                        </li>
+                        <li class="item">
+                        ・さけるチーズ<p>(1本:80kcal,P:7g,F:6g,C:0g)</p>
+                        </li>
+                        <li class="item">
+                        ・ギリシャヨーグルト<br>(1カップ110g:70kcal,P:12g,F:0g,C:5g)
+                        </li>
+                        <li class="item">
+                        ・せんべい(揚げていないもの)<p>(1枚:40kcal,P:1g,F:0g,C:10g)</p>
+                        </li>
+                        <li class="item">
+                        ・バナナ<p>(1本:90kcal,P:1g,F:0g,C:22g)</p>
+                        </li>
+                        <li class="item">
+                        ・鮭のおにぎり<p>(180kcal,P:5g,F:2g,C:36g)</p>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-            <div class="card-footer">
-                <h6>460kcal<br>タンパク質:22g,脂質:12g,炭水化物65g</h6>
             </div>
         </div>
-        <div class="card">
-            <div class="card-body">
-                <div class="card-title">
-                    <h5>洋食</h5>
-                </div>
-                <div class="card-text">
-                    <h6>・ベーグル<h6>
-                    <p>(1個225kcal,P:8g,F:1g,C:45g)</p>
-                    <h6>・ゆで卵<h6>
-                    <p>(80kcal,P:7g,F:6g,C:0g)</p>
-                    <h6>プレーンヨーグルト<h6>
-                    <p>(100gあたり80kcal,P:8g,F:5g,C:5g)</p> 
-                </div>
-            </div>
-            <div class="card-footer">
-                <h6>385kcal<br>タンパク質:23g,脂質:12g,炭水化物50g</h6>
-            </div>
-        </div>
-    </div>
-    <div class="card-group">
-        <div class="card">
-            <div class="card-body">
-                <div class="card-title">
-                    <h5>card sample</h5>
-                </div>
-                <div class="card-text">
-                    <p>This is a card sample.</p>
-                </div>
-            </div>
-            <div class="card-footer">
-            </div> 
-        </div>
-        <div class="card">
-            <div class="card-body">
-                <div class="card-title">
-                    <h5>card sample</h5>
-                </div>
-            <div class="card-text">
-                <p>This is a card sample.</p>
-            </div>
-        </div>
-        <div class="card-footer">
-        </div> 
-    </div>
-</div>
     <div class="card">
         <div class="card-body text-center">
-        <button onclick="location.href='/morning'" class="btn btn-danger btn-lg m-3" style="background-color:#e77213">朝食</button>
-        <button onclick="location.href='/lunch'" class="btn btn-danger btn-lg m-3" style="background-color:#e77213">昼食</button>
-        <button onclick="location.href='/dinner'" class="btn btn-danger btn-lg m-3" style="background-color:#e77213">夕食</button>
-        <button onclick="location.href='/home'" class="btn btn-danger btn-lg m-3" style="background-color:#e77213">ホーム</button>
+        <button onclick="location.href='/morning'" class="btn btn- btn-dark btn-lg m-3" >朝食</button>
+        <button onclick="location.href='/lunch'" class="btn btn- btn-dark btn-lg m-3" >昼食</button>
+        <button onclick="location.href='/dinner'" class="btn btn- btn-dark btn-lg m-3" >夕食</button>
+        <button onclick="location.href='/home'" class="btn btn- btn-dark btn-lg m-3" >ホーム</button>
         </div>
     </div>
-</div>    
+</div>
+</div    
 
 
 

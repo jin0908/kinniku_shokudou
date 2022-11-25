@@ -8,6 +8,8 @@ use Carbon\Carbon;
 
 use App\Models\User;
 
+use Storage; 
+
 
 class HomeController extends Controller
 {
@@ -86,33 +88,35 @@ class HomeController extends Controller
 
 
         //必要タンパク質量を計算
-        //細マッチョ・ソフトマッチョ 必要kcalの20%/4
-        if($body === 'hoso' || 'soft' ){
+        //全ての体型で 必要kcalの20%/4
             $protein = $kcal*0.2/4;
             $protein2 = round($protein);
-        //ゴリマッチョ 必要kcalの25%/4
-        }else{
-            $protein = $kcal*0.25/4;
-            $protein2 = round($protein);
-        }
-        
-
-
+            
         //必要脂質量を計算 全ての体型で必要kcalの20%/9
         $fat = $kcal*0.2/9;
         $fat2 = round($fat);
         
         //必要炭水化物量を計算
-        //細マッチョ・ソフトマッチョ 必要kcalの60%/4
-        if($body === 'hoso' || 'soft' ){
-            $carb = $kcal*0.6/4;
-            $carb2 = round($carb);
-        //ゴリマッチョ 必要kcalの55%/4
+        //全ての体型で 必要kcalの60%/4
+        $carb = $kcal*0.6/4;
+        $carb2 = round($carb);
+
+        //間食の回数を取得
+        //細マッチョ 1回
+        if($body === 'hoso'){
+            $snack_time = 1;
+        //ソフトマッチョ 2回
+        }elseif($body === 'soft'){
+            $snack_time = 2;
+        //ゴリマッチョ 3回
         }else{
-            $carb = $kcal*0.55/4;
-            $carb2 = round($carb);
+            $snack_time = 3;
         }
-        return view('home', compact('user','dt3','kcal2','protein2','fat2','carb2'));
+                
+
+
+
+        return view('home', compact('user','dt3','kcal2','protein2','fat2','carb2','snack_time'));
 
     }
     

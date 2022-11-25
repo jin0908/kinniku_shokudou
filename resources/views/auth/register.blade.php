@@ -80,7 +80,7 @@
                             <label for="height" class="col-md-4 col-form-label text-md-right">{{ __('身長(cm)') }}</label>
 
                             <div class="col-md-6">
-                                <input id="height" type="number" value="160" step="0.5" min="130" max="250" class="form-control @error('height') is-invalid @enderror" name="height" value="{{ old('height') }}" required autocomplete="height" autofocus>
+                                <input id="height" type="number" value="160" step="0.1" min="130" max="250" class="form-control @error('height') is-invalid @enderror" name="height" value="{{ old('height') }}" required autocomplete="height" autofocus>
 
                                 @error('height')
                                     <span class="invalid-feedback" role="alert">
@@ -95,7 +95,7 @@
                             <label for="weight" class="col-md-4 col-form-label text-md-right">{{ __('体重(kg)') }}</label>
 
                             <div class="col-md-6">
-                                <input id="weight" type="number" value="50" step="0.5" class="form-control @error('weight') is-invalid @enderror" name="weight" value="{{ old('weight') }}" required autocomplete="weight" autofocus>
+                                <input id="weight" type="number" value="50" step="0.1" class="form-control @error('weight') is-invalid @enderror" name="weight" value="{{ old('weight') }}" required autocomplete="weight" autofocus>
 
                                 @error('height')
                                     <span class="invalid-feedback" role="alert">

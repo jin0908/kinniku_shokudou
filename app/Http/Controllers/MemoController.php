@@ -15,6 +15,16 @@ class MemoController extends Controller
         return view('record');    
     }
 
+    public function input(){
+
+        return view('input');    
+    }
+
+    public function record_edit(){
+
+        return redirect()->route('record');      
+    }
+
 
 
 

@@ -29,7 +29,13 @@ Route::get('/lunch', [App\Http\Controllers\MenuController::class, 'lunch'])->nam
 Route::get('/dinner', [App\Http\Controllers\MenuController::class, 'dinner'])->name('dinner');
 //間食画面
 Route::get('/snack', [App\Http\Controllers\MenuController::class, 'snack'])->name('snack');
+//アカウント編集画面
+Route::get('/edit/{id}', [App\Http\Controllers\UserController::class, 'edit'])->name('edit');
 //アカウント編集
-Route::get('/edit', [App\Http\Controllers\UserController::class, 'edit'])->name('edit');
+Route::post('/update/{id}', [App\Http\Controllers\UserController::class, 'update'])->name('update');
 //記録カレンダー画面
 Route::get('/record', [App\Http\Controllers\MemoController::class, 'record'])->name('record');
+//記録カレンダー編集画面
+Route::get('/input', [App\Http\Controllers\MemoController::class, 'input'])->name('input');
+//記録カレンダー編集
+Route::post('/record_edit/{id}', [App\Http\Controllers\MemoController::class, 'record_edit'])->name('record_edit');
