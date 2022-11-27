@@ -15,6 +15,13 @@ class RecordController extends Controller
         return view('record'); 
     }
     
+    //記録入力画面を表示
+    public function add(){
+
+        
+        return view('add'); 
+    }
+    
     
     //記録入力
     public function record_add(Request $request){
