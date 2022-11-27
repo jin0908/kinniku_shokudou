@@ -33,9 +33,11 @@ Route::get('/snack', [App\Http\Controllers\MenuController::class, 'snack'])->nam
 Route::get('/edit/{id}', [App\Http\Controllers\UserController::class, 'edit'])->name('edit');
 //アカウント編集
 Route::post('/update/{id}', [App\Http\Controllers\UserController::class, 'update'])->name('update');
-//記録カレンダー画面
-Route::get('/record', [App\Http\Controllers\MemoController::class, 'record'])->name('record');
-//記録カレンダー編集画面
-Route::get('/input', [App\Http\Controllers\MemoController::class, 'input'])->name('input');
-//記録カレンダー編集
-Route::post('/record_edit/{id}', [App\Http\Controllers\MemoController::class, 'record_edit'])->name('record_edit');
+//記録一覧画面
+Route::get('/record', [App\Http\Controllers\RecordController::class, 'record'])->name('record');
+//記録一覧編集画面
+Route::get('/record_edit', [App\Http\Controllers\RecordController::class, 'input'])->name('record_edit');
+//記録一覧編集
+Route::post('/record_update/{id}', [App\Http\Controllers\RecordController::class, 'record_edit'])->name('record_update');
+//記録入力
+Route::get('/record_add', [App\Http\Controllers\RecordController::class, 'record_add'])->name('record_add');
