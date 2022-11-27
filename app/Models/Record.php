@@ -17,4 +17,6 @@ class Record extends Model
         'fat',
         'carb',
     ];
+
+    public $timestamps = false;
 }
