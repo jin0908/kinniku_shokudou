@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<header><h1 class="headline">11月</h1></header>
+<header><h1 style="text-align: center">11月</h1></header>
     <div class="container">
         <div class="main">
             <table class="table table-bordered">
@@ -73,10 +73,18 @@
 
 
     <footer>
-    <div class="d-grid gap-2 col-4 mx-auto section1 text-center">
-        <button onclick="location.href='/record_add'" class="btn btn-dark btn-lg" >入力</button>
-    </div>    
-    </footer>        
+    <div class="d-grid gap-2 col-4 mx-auto text-center">
+        <button onclick="location.href='/add' " class="btn btn-dark btn-lg" >データを入力する</button>
+    </div>
+    <div class="text-center">
+        <button onclick="location.href='/home'" class="btn btn-outline-dark btn-lg m-3" >ホームへ戻る</button>
+    </div>
+                    
+
+    </footer>
+
+
+            
 
 
     @endsection
