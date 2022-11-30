@@ -40,18 +40,21 @@ class RecordController extends Controller
 
         //アカウントデータを取得
         $user = \Auth::user();
-        
+        //dd($user);
+        //dd($request["record"]);
+
         foreach($request["record"] as $value){
             $record = new Record();
             
-            $record->user_id =  $user['id'];
+            $record->user_id =  $user->id;
             $record->date = $value['date'];
             $record->weight = $value['weight'];
             $record->kcal = $value['kcal'];
             $record->protein = $value['protein'];
             $record->fat = $value['fat'];
             $record->carb = $value['carb'];
-            $record->save();
+            Record::upsert($request["record"],['user_id', 'date']);
+            
             }
 
         return redirect()->route('record');      
