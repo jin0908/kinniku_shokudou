@@ -8,70 +8,30 @@
                 <thead class="thead-dark">
                     <tr>
                     <th scope="col"></th>
-                    <th scope="col">体重</th>
-                    <th scope="col">カロリー</th>
-                    <th scope="col">タンパク質</th>
-                    <th scope="col">脂質</th>
-                    <th scope="col">炭水化物</th>
+                    <th scope="col">体重(kg)</th>
+                    <th scope="col">カロリー(kcal)</th>
+                    <th scope="col">タンパク質(g)</th>
+                    <th scope="col">脂質(g)</th>
+                    <th scope="col">炭水化物(g)</th>
+                    <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
+                @foreach ($record as $record)
                 <tr>
-                    <th scope="row">1</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <th scope="row">{{ date("j日", strtotime($record->date)) }}</th>
+                    <td>{{ $record->weight }}</td>
+                    <td>{{ $record->kcal }}</td>
+                    <td>{{ $record->protein }}</td>
+                    <td>{{ $record->fat }}</td>
+                    <td>{{ $record->carb }}</td>
+                    <td><a href="{{ url('record_update'.$record->id) }}">>>編集</a></td>
                 </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th scope="row">5</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th scope="row">6</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+                @endforeach 
                 </tbody>
             </table>
         </div>
     </div>
-
-
-
-
     <footer>
     <div class="d-grid gap-2 col-4 mx-auto text-center">
         <button onclick="location.href='/add' " class="btn btn-dark btn-lg" >データを入力する</button>
